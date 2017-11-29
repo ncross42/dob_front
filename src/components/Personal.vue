@@ -45,7 +45,7 @@
       </q-collapsible>
     </q-card>
 
-    <q-card id="top_hier">
+    <q-card id="top_hier" class="top_list">
       <q-collapsible group="somegroup2" class="text-bold" icon="filter_list" label="인기계층" opened>
         <table width="100%" cellpadding="1" cellspacing="1" align="center">
           <thead>
@@ -58,47 +58,77 @@
           <tbody>
             <tr class="q-item-link">
               <td class="col_name">
-                <div class="col_name hier_bread">
-                  <i>대한민국</i>
-                  <i>서울시</i>
-                  <i>서초구</i>
-                  <i>반포1동</i>
-                </div>
+                <router-link to="home">
+                  <div class="col_name bread_hier">
+                    <i>대한민국</i> <i>서울시</i> <i>서초구</i> <i>반포1동</i>
+                  </div>
+                </router-link>
               </td>
-              <td class="col_badge">
-                <span class="badge new_bbs">14</span>
+              <td class="col_badge"> <span class="badge new_bbs">14</span> </td>
+              <td class="col_badge"> <span class="badge new_offer">7</span> </td>
+            </tr>
+            <tr class="q-item-link">
+              <td class="col_name">
+                <router-link to="home">
+                  <div class="col_name bread_hier">
+                    <i>서울시</i> <i>서초구</i> <i>반포1동</i>
+                  </div>
+                </router-link>
               </td>
-              <td class="col_badge">
-                <span class="badge new_offer">7</span>
+              <td class="col_badge"> <span class="badge new_bbs">14</span> </td>
+              <td class="col_badge"> <span class="badge new_offer">7</span> </td>
+            </tr>
+            <tr class="q-item-link">
+              <td class="col_name">
+                <router-link to="home">
+                  <div class="col_name bread_hier">
+                    <i>대한민국</i> <i>서울시</i> <i>서초구</i> <i>반포1동</i>
+                  </div>
+                </router-link>
               </td>
+              <td class="col_badge"> <span class="badge new_bbs">14</span> </td>
+              <td class="col_badge"> <span class="badge new_offer">7</span> </td>
             </tr>
           </tbody>
         </table>
       </q-collapsible>
     </q-card>
 
-    <q-card>
+    <q-card id="top_group" class="top_list">
       <q-collapsible group="somegroup3" class="text-bold" icon="group" label="인기단체" opened>
-        <div>
-          Content
-          <q-item>
-            <q-item-side avatar="/statics/boy-avatar.png" />
-            <q-item-main>
-              <q-item-tile label>John Doe</q-item-tile>
-              <q-item-tile sublabel>Quasar enthusiast</q-item-tile>
-            </q-item-main>
-            <q-item-side right>
-              <q-item-tile icon="chat_bubble" color="green" />
-            </q-item-side>
-          </q-item>
-          <q-item>
-            <q-item-side>
-                <q-icon name="panorama_vertical" />
-            </q-item-side>
-            <q-item-main label="John Doe" sublabel="Quasar enthusiast" />
-            <q-item-side right icon="chat_bubble" />
-          </q-item>
+        <div class="row list_tr list_header">
+          <div class="col_name">단체</div>
+          <div class="col_badge new_bbs">토론</div>
+          <div class="col_badge new_offer">발의</div>
         </div>
+        <router-link to="home">
+          <div class="row q-item-link list_tr">
+            <div class="col_name"> 그린피스 </div>
+            <div class="col_badge new_bbs"><span class="badge new_bbs">14</span></div>
+            <div class="col_badge new_offer"><span class="badge new_offer">7</span></div>
+          </div>
+        </router-link>
+        <router-link to="home">
+          <div class="row q-item-link list_tr">
+            <div class="col_name">원전당</div>
+            <div class="col_badge new_bbs"><span class="badge new_bbs">14</span></div>
+            <div class="col_badge new_offer"><span class="badge new_offer">7</span></div>
+          </div>
+        </router-link>
+        <router-link to="home">
+          <div class="row q-item-link list_tr">
+            <div class="col_name">재생당</div>
+            <div class="col_badge new_bbs"><span class="badge new_bbs">14</span></div>
+            <div class="col_badge new_offer"><span class="badge new_offer">7</span></div>
+          </div>
+        </router-link>
+        <router-link to="home">
+          <div class="row q-item-link list_tr">
+            <div class="col_name"> 전국청년정책네트워크 abcde abcde </div>
+            <div class="col_badge new_bbs"><span class="badge new_bbs">14</span></div>
+            <div class="col_badge new_offer"><span class="badge new_offer">7</span></div>
+          </div>
+        </router-link>
       </q-collapsible>
     </q-card>
 
@@ -191,32 +221,45 @@ export default {
       color red
       font-size 0.8em
       line-height 1.8em
-  #top_hier
+  .top_list
     border-radius: 10px;
     border: 1px solid silver;
-    text-align left
+    text-align center
+    font-size 0.9em
+    .q-collapsible-sub-item
+      padding 0px 16px 8px 16px
+    .col_name
+      width 182px
+    .col_badge
+      width 34px
     .new_bbs
       color orange
     .new_offer
       color red
+    .list_header
+    .list_tr
+      border-bottom 1px solid silver
+      &.q-item-link
+        .col_name
+          text-align left
+          padding-left 1.7em
+          color: #000;
+          &:before
+            // font-family: "Material Icons"
+            // content: "\E877"
+            // content: url('/statics/boy-avatar.png');
+            // content: "\e7ef"
+            content: "\1F3C6"
+            float: left;
+            margin-left: -1.7em
     table
       table-layout fixed
       border-collapse collapse
       text-align center
       tr
         border-bottom 1px solid silver
-      thead
-        th
-          font-size 0.8em
-        .col_name
-          width 170px
-          text-align left
-          padding-left 2.0em
-        .col_badge
-          width 34px
+        height 1.8em
       tbody
-        td
-          font-size 1.0em
         .col_name
           text-align left
           padding-left: 0.7em
@@ -235,7 +278,7 @@ export default {
               background-color orange
           .new_offer
               background-color red
-        .hier_bread
+        .bread_hier
           font 0.8em normal
           &:before
             // font-family: "Material Icons"
@@ -256,6 +299,9 @@ export default {
             content: " ";
           i:last-child:after
             content: "";
+        tr
+          a
+            width 100%
 
 // .layout-aside-right
 // .layout-aside-left
