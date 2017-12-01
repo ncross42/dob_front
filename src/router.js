@@ -25,7 +25,18 @@ export default new VueRouter({
   scrollBehavior: () => ({ y: 0 }),
 
   routes: [
-    { path: '/', component: load('Main') },
+    { path: '/l', component: load('Layout'),
+      children: [
+        { path: '/main', component: load('Main') },
+        { path: '/register', component: load('Register') },
+        { path: '/login', component: load('Login') },
+        { path: '/category', component: load('Category') },
+        { path: '/mystat', component: load('Mystat') },
+        { path: '/allstat', component: load('Allstat') },
+        { path: '/offer', component: load('Offer') },
+        { path: '/elect', component: load('Elect') },
+      ]
+    },
     { path: '/h', component: load('Hello') },
 
     // Always leave this last one
