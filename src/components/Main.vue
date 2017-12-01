@@ -1,5 +1,5 @@
 <template>
-  <q-option-group
+  <!-- <q-option-group
     color="secondary"
     type="checkbox"
     v-model="group"
@@ -8,7 +8,12 @@
       { label: 'Option 2', value: 'op2' },
       { label: 'Option 3', value: 'op3' }
     ]"
-  />
+  /> -->
+  <div>
+    asdfasdfwqer
+    qwerqwerzxcvzxcv
+    qwerqwerwqer
+  </div>
 </template>
 
 <script>
