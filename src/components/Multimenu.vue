@@ -1,9 +1,12 @@
 <template>
   <!-- Right Side Panel -->
   <div id="multimenu">
-     <!-- <q-btn flat @click="$refs.layout.hideRight()" class="pull-right">
-        <q-icon name="close" />
-      </q-btn>
+    <q-btn flat @click="$parent.toggleRight()" class="pull-right">
+      <q-icon name="close" />
+    </q-btn>
+
+    <q-card>
+
       <q-list no-border link inset-separator>
         <q-list-header>Essential Links</q-list-header>
         <q-side-link item to="/chat">
@@ -14,92 +17,112 @@
           <q-item-side icon="rss feed" />
           <q-item-main label="Twitter" sublabel="@quasarframework" />
         </q-side-link>
-      </q-list>  -->
-    <div class="nav">
-      <ul class="nav__list">
-        <li>
-          <input id="group-1" type="checkbox" hidden />
-          <label for="group-1"><i class="material-icons">chevron_right</i> First level</label>
-          <ul class="group-list">
-            <li><a href="#">1st level item</a></li>
-            <li>
-              <input id="sub-group-1" type="checkbox" hidden />
-              <label for="sub-group-1"><i class="material-icons">chevron_right</i> Second level</label>
-              <ul class="sub-group-list">
-                <li><a href="#">2nd level nav item</a></li>
-                <li><a href="#">2nd level nav item</a></li>
-                <li><a href="#">2nd level nav item</a></li>
-                <li>
-                  <input id="sub-sub-group-1" type="checkbox" hidden />
-                  <label for="sub-sub-group-1"><i class="material-icons">chevron_right</i> Third level</label>
-                  <ul class="sub-sub-group-list">
-                    <li><a href="#">3rd level nav item</a></li>
-                    <li><a href="#">3rd level nav item</a></li>
-                    <li><a href="#">3rd level nav item</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <!-- <li>
-          <input id="group-2" type="checkbox" hidden />
-          <label for="group-2"><i class="material-icons">chevron_right</i> First level</label>
-          <ul class="group-list">
-            <li>
+      </q-list> 
+
+      <!-- <div class="nav">
+        <ul class="nav__list">
+          <li>
+            <input id="group-1" type="checkbox" hidden />
+            <label for="group-1"><i class="material-icons">chevron_right</i> First level</label>
+            <ul class="group-list">
               <li><a href="#">1st level item</a></li>
-              <li><a href="#">1st level item</a></li>
-              <input id="sub-group-2" type="checkbox" hidden />
-              <label for="sub-group-2"><i class="material-icons">chevron_right</i> Second level</label>
-              <ul class="sub-group-list">
-                <li><a href="#">2nd level nav item</a></li>
-                <li><a href="#">2nd level nav item</a></li>
-                <li>
-                  <input id="sub-sub-group-2" type="checkbox" hidden />
-                  <label for="sub-sub-group-2"><i class="material-icons">chevron_right</i> Third level</label>
-                  <ul class="sub-sub-group-list">
-                    <li><a href="#">3rd level nav item</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <input id="group-4" type="checkbox" hidden />
-          <label for="group-4"><i class="material-icons">chevron_right</i> First level</label>
-          <ul class="group-list">
-            <li>
-              <li><a href="#">1st level item</a></li>
-              <input id="sub-group-4" type="checkbox" hidden />
-              <label for="sub-group-4"><i class="material-icons">chevron_right</i> Second level</label>
-              <ul class="sub-group-list">
-                <li><a href="#">2nd level nav item</a></li>
-                <li><a href="#">2nd level nav item</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li> -->
-      </ul>
-    </div>
+              <li>
+                <input id="sub-group-1" type="checkbox" hidden />
+                <label for="sub-group-1"><i class="material-icons">chevron_right</i> Second level</label>
+                <ul class="sub-group-list">
+                  <li><a href="#">2nd level nav item</a></li>
+                  <li><a href="#">2nd level nav item</a></li>
+                  <li><a href="#">2nd level nav item</a></li>
+                  <li>
+                    <input id="sub-sub-group-1" type="checkbox" hidden />
+                    <label for="sub-sub-group-1"><i class="material-icons">chevron_right</i> Third level</label>
+                    <ul class="sub-sub-group-list">
+                      <li><a href="#">3rd level nav item</a></li>
+                      <li><a href="#">3rd level nav item</a></li>
+                      <li><a href="#">3rd level nav item</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div> -->
+
+    </q-card>
   </div>
 </template>
 
 <script>
 import {
-  openURL, QBtn, QIcon, QList, QListHeader, QItem, QItemSide, QItemMain, QSideLink, QSearch, Dialog, 
-  QCollapsible, QChip, QItemTile
+  QBtn, QIcon, QCard,
+  openURL, QList, QListHeader, QItem, QItemSide, QItemMain, QSideLink, QSearch, Dialog, 
+  QCollapsible, QChip, QItemTile,
+  
 } from "quasar";
 
 export default {
   name: "multimenu",
   components: {
-    QBtn, QIcon, QList, QListHeader, QItem, QItemSide, QItemMain, QSideLink, QSearch, 
+    QBtn, QIcon, QCard,
+    QList, QListHeader, QItem, QItemSide, QItemMain, QSideLink, QSearch, 
     QCollapsible, QChip, QItemTile
   },
   data() {
     return {
-      variable: "alright"
+      variable: "alright",
+      arrMenu: {
+        home: {
+          lv: 0, name: 'Home', link: '/',
+          children: [
+            { lv: 1, name: '소개', link: 'about', }, 
+            { lv: 1, name: '공지', link: 'notice', }, 
+            { lv: 1, name: '자유게시판', link: 'freeboard', },
+            { lv: 1, name: '문의사항', link: 'qna', },
+          ]
+        },
+        hierarchy: {
+          lv: 0, name: '대한민국 (계층분류)', link: 'district',
+          children: [
+            { lv: 1, name: '서울특별시', link: 'seoul',
+              children: [
+                { lv: 2, name: '송파구', link: 'songpa', },
+                { lv: 2, name: '강남구', link: 'gangnam', }, 
+                { lv: 2, name: '서초구', link: 'seocho', },
+              ]
+            },
+            { lv: 1, name: '부산광역시', link: 'busan',
+              children: [
+                { lv: 2, name: '중구', link: 'jung', },
+                { lv: 2, name: '북구', link: 'book', }, 
+                { lv: 2, name: '남구', link: 'nam', },
+              ]
+            },
+          ]
+        }, 
+        subject: {
+          lv: 0, name: '주제분류', link: 'subject',
+          children: [
+            { lv: 1, name: '교육', link: 'education', }, 
+            { lv: 1, name: '노동', link: 'labor',
+              children: [
+                { lv: 2, name: '청소년', link: 'young', }, 
+                { lv: 2, name: '청년', link: 'youth', },
+                { lv: 2, name: '임시직', link: 'temporary', },
+              ] 
+            }, 
+            { lv: 1, name: '주거', link: 'realestate', }
+          ]
+        }, 
+        group: {
+          lv: 0, name: '단체분류', link: 'group',
+          children: [
+            { lv: 1, name: '그린피스', link: 'greenpeace', }, 
+            { lv: 1, name: '원전당', link: 'nuclear', }, 
+            { lv: 1, name: '재생당', link: 'renewable', }
+          ]
+        }
+      }
     };
   },
   computed: {},
@@ -162,7 +185,7 @@ export default {
     display: block;
     padding: .85rem;
     color: #fff;
-    background-color: #151515;
+    background-color: $primary;
     box-shadow: inset 0 -1px #1d1d1d;
     -webkit-transition: all .25s ease-in;
     transition: all .25s ease-in;

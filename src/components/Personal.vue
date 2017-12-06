@@ -1,7 +1,7 @@
 <template>
   <!-- Left Side Panel -->
   <div id="personal" class="row">
-    <!-- <q-btn flat @click="$refs.layout.hideLeft()"> <q-icon name="arrow_back" /> </q-btn> -->
+    <q-btn flat @click="$parent.toggleLeft()"> <q-icon name="arrow_back" /> </q-btn>
     <q-card-actions id="account" class="shadow-1">
       <q-btn outline>
         <q-icon size="4em" name="account_circle" />
