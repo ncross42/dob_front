@@ -35,20 +35,7 @@
 
     <!-- Right Side Panel -->
     <div slot="right">
-      <q-btn flat @click="$refs.layout.hideRight()" class="pull-right">
-        <q-icon name="close" />
-      </q-btn>
-      <q-list no-border link inset-separator>
-        <q-list-header>Essential Links</q-list-header>
-        <q-side-link item to="/chat">
-          <q-item-side icon="chat" />
-          <q-item-main label="Gitter Channel" sublabel="Quasar Lobby" />
-        </q-side-link>
-        <q-side-link item to="/twitter">
-          <q-item-side icon="rss feed" />
-          <q-item-main label="Twitter" sublabel="@quasarframework" />
-        </q-side-link>
-      </q-list>
+      <multimenu></multimenu>
     </div>
 
     <!-- sub-routes get injected here: -->
@@ -65,6 +52,7 @@
 
 <script>
 import Personal from './Personal'
+import Multimenu from './Multimenu'
 
 import {
   openURL, QLayout, QToolbar, QToolbarTitle, QBtn, QIcon, QList, QListHeader, QItem, QItemSide, QItemMain, QSideLink, QTabs, QRouteTab, 
@@ -72,11 +60,11 @@ import {
 } from 'quasar'
 
 export default {
-  name: 'index',
+  name: 'layout',
   components: {
     QLayout, QToolbar, QToolbarTitle, QBtn, QIcon, QList, QListHeader, QItem, QItemSide, QItemMain, QSideLink, QTabs, QRouteTab, 
     QSearch, QCard, QCardTitle, QCardMain, QCardActions, QCardMedia, QCardSeparator,
-    Personal,
+    Personal, Multimenu
   },
   data () {
     return {

@@ -98,6 +98,12 @@ module.exports = {
         postcss: cssUtils.postcss
       }
     }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jquery: 'jquery',
+      'window.jQuery': 'jquery',
+      jQuery: 'jquery'
+    }),
     new ProgressBarPlugin({
       format: config.progressFormat
     })
