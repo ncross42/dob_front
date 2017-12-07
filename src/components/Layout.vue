@@ -35,7 +35,8 @@
 
     <!-- Right Side Panel -->
     <div slot="right">
-      <multimenu></multimenu>
+      <!-- <menu-panelq></menu-panelq> -->
+      <menu-panel></menu-panel>
     </div>
 
     <!-- sub-routes get injected here: -->
@@ -52,7 +53,8 @@
 
 <script>
 import Personal from './Personal'
-import Multimenu from './Multimenu'
+import MenuPanel from './MenuPanel'
+// import MenuPanelq from './MenuPanelq'
 
 import {
   openURL, QLayout, QToolbar, QToolbarTitle, QBtn, QIcon, QList, QListHeader, QItem, QItemSide, QItemMain, QSideLink, QTabs, QRouteTab, 
@@ -64,7 +66,7 @@ export default {
   components: {
     QLayout, QToolbar, QToolbarTitle, QBtn, QIcon, QList, QListHeader, QItem, QItemSide, QItemMain, QSideLink, QTabs, QRouteTab, 
     QSearch, QCard, QCardTitle, QCardMain, QCardActions, QCardMedia, QCardSeparator,
-    Personal, Multimenu
+    Personal, MenuPanel, // MenuPanelq
   },
   data () {
     return {
