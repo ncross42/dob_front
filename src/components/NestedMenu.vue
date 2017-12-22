@@ -7,11 +7,11 @@
         <i class="material-icons">chevron_right</i>
       </label>
     </div> -->
-    <router-link :to='menu.url' class="mm_a">
+    <router-link :to="menu.url" class="mm_a">
       <i class="material-icons" v-if="menu.icon">{{menu.icon}}</i>
       <div class="mm_title"> {{menu.title}} </div>
       <label v-if="menu.children" class="mm_folder pull-right" @click="clickFolder2">
-        <input type="checkbox" hidden/>
+        <input type="checkbox" hidden>
         <i class="material-icons">chevron_right</i>
       </label>
     </router-link>

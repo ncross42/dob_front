@@ -17,9 +17,6 @@ export default {
   props: ['menu'],
   components: {
     NestedMenu, QCollapsible, QBtn, QIcon, QList, QItemTile,
-    // QBtn, QIcon, QCard, QList,
-    // QListHeader, QItem, QItemSide, QItemMain, QSideLink, QSearch, 
-    // QCollapsible, QChip, QItemTile
   },
   data() {
     return { }

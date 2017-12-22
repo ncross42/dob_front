@@ -13,7 +13,7 @@
   <div>
 
     <q-card>
-      <q-card-title>Card Title</q-card-title>
+      <q-card-title><img src="~assets/ic-topic-05.svg"/>인기 발의</q-card-title>
       <q-card-main>
         <q-carousel arrows handle-arrow-keys dots fullscreen infinite autoplay class="text-black">
           <div slot="slide" class="bg-primary">
@@ -32,8 +32,34 @@
       </q-card-main>
     </q-card>
 
+
+    <div id="main_bbs">
+      <div class="bbs_container">
+        <div class="bbs_title">
+          <img src="~assets/ic-topic-02.svg" />
+          <b>최근 게시글</b>
+        </div>
+        <div class="bbs_list">
+          <template v-for="item in arrBoardNew" >
+            <board-line :title="item.title" :date="item.date" />
+          </template>
+        </div>
+      </div>
+      <div class="bbs_container">
+        <div class="bbs_title">
+          <img src="~assets/ic-topic-03.svg" />
+          <b>주간 인기 게시글</b>
+        </div>
+        <div class="bbs_list">
+          <template v-for="item in arrBoardNew" >
+            <board-line :title="item.title" :date="item.date" />
+          </template>
+        </div>
+      </div>
+    </div>
+
     <q-card>
-      <q-card-title>Card Title</q-card-title>
+      <q-card-title><img src="~assets/ic-topic-04.svg"/>최근 발의</q-card-title>
       <q-card-main class="slick-container">
         <slick ref="slick" :options="slickOptions">
           <div><h3>1</h3></div>
@@ -48,6 +74,8 @@
 </template>
 
 <script>
+import BoardLine from './BoardLine';
+
 import { QCard, QCardTitle, QCardMain, QCarousel } from 'quasar'
 import Slick from 'vue-slick';
 import 'slick-carousel/slick/slick.css';
@@ -57,12 +85,21 @@ export default {
   name: 'main',
   components: {
     QCard, QCardTitle, QCardMain, QCarousel,
-    Slick
+    Slick,
+    BoardLine
   },
   data () {
     return {
       // `v-model` binded to `group`,
       // which must be an array for checkboxes and toggles
+      arrBoardNew: [
+        { title: '개방형 직위 7개 공모', date: '17.11.22' },
+        { title: '개방형 직위 7개 공모합니다 border', date: '17.11.22' },
+        { title: '개방형 직위 7개 border spaces 개방형 직위 7개 border spaces', date: '17.11.22' },
+        { title: '개방형 직위 7개 공모', date: '17.11.22' },
+        { title: '개방형 직위 7개 공모합니다 border', date: '17.11.22' },
+        { title: '개방형 직위 7개 border spaces 개방형 직위 7개 border spaces', date: '17.11.22' },
+      ],
       group: ['opt1'],
       slickOptions: {
         dots: true,
@@ -121,6 +158,25 @@ export default {
 </script>
 
 <style lang="stylus">
+#main_bbs
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: 8px;
+  .bbs_container
+    // margin: 8px;
+    padding: 4px;
+    @media screen and (max-width: 420px)
+      width: 100%;
+    @media screen and (min-width: 421px)
+      width: 420px;
+    border: 1px solid silver;
+    border-radius: 2px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.2), 0 2px 2px rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12);
+    .bbs_title
+      padding: 4px;
+    .bbs_list
+      font-size: 0.9rem;
 .q-card-main.slick-container
   background-color lightblue
   padding 0px 0px 1px 0px

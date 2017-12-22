@@ -4,7 +4,7 @@
     <q-btn flat @click="$parent.toggleLeft()"> <q-icon name="arrow_back" /> </q-btn>
     <q-card-actions id="account" class="shadow-1">
       <q-btn outline>
-        <q-icon size="4em" name="account_circle" />
+        <q-icon size="4rem" name="account_circle" />
       </q-btn>
       <q-side-link to="/Login">
         <div class="column">
@@ -20,27 +20,9 @@
     <q-card id="notice">
       <q-collapsible group="somegroup1" class="text-bold" icon="error_outline" label="공지사항" opened>
         <q-list no-border>
-          <div class="bbs row">
-            <div class="bbs-tick"></div>
-            <div class="bbs-title text-primary">
-              개방형 직위 7개 공모
-            </div>
-            <div class="bbs-date">17.11.22</div>
-          </div>
-          <div class="bbs row">
-            <div class="bbs-tick"></div>
-            <div class="bbs-title text-primary">
-              개방형 직위 7개 공모합니다 border
-            </div>
-            <div class="bbs-date">17.11.22</div>
-          </div>
-          <div class="bbs row">
-            <div class="bbs-tick"></div>
-            <div class="bbs-title text-primary">
-              개방형 직위 7개 border spaces
-            </div>
-            <div class="bbs-date">17.11.22</div>
-          </div>
+          <template v-for="(item,i) in arrNotice" >
+            <board-line :title="item.title" :date="item.date" />
+          </template>
         </q-list>
       </q-collapsible>
     </q-card>
@@ -143,6 +125,8 @@
 </template>
 
 <script>
+import BoardLine from './BoardLine';
+
 import {
   openURL, QBtn, QIcon, QList, QListHeader, QItem, QItemSide, QItemMain, QSideLink, QTabs, QRouteTab, QSearch, Dialog, 
   QCard, QCardTitle, QCardMain, QCardActions, QCardMedia, QCardSeparator,
@@ -154,11 +138,16 @@ export default {
   components: {
     QBtn, QIcon, QList, QListHeader, QItem, QItemSide, QItemMain, QSideLink, QTabs, QRouteTab, QSearch, 
     QCard, QCardTitle, QCardMain, QCardActions, QCardMedia, QCardSeparator,
-    QCollapsible, QChip, QItemTile
+    QCollapsible, QChip, QItemTile,
+    BoardLine
   },
   data() {
     return {
-      variable: "alright"
+      arrNotice: [
+        { title: '개방형 직위 7개 공모', date: '17.11.22' },
+        { title: '개방형 직위 7개 공모합니다 border', date: '17.11.22' },
+        { title: '개방형 직위 7개 border spaces', date: '17.11.22' },
+      ],
     };
   },
   computed: {},
@@ -196,37 +185,38 @@ export default {
   .q-card-actions
     width 100%
   #account
-    margin 0.5em
-    padding 0.5em 1em
+    margin 0.5rem
+    padding 0.5rem 1rem
     text-align center
     .plz-login 
-      padding-left 0.5em
+      padding-left 0.5rem
   #notice
-    .bbs
-      font-size 0.9em
+    .board
+      display flex
+      font-size 0.9rem
       justify-content space-between
-      margin 0.2em 0.0em
-    .bbs-tick
-      width 0.3em
+      margin 0.2rem 0.0rem
+    .board-tick
+      width 0.3rem
       background orange
-    .bbs-title
-      width 13.5em
+    .board-title
+      width 12.0rem
       overflow hidden
       word-wrap normal
       white-space nowrap
       text-overflow ellipsis
-      margin-left 0.2em
-    .bbs-date
+      margin-left 0.2rem
+    .board-date
       margin-left auto
       color red
-      font-size 0.8em
-      line-height 1.8em
+      font-size 0.8rem
+      line-height 1.45rem
   .top_list
     border-radius: 10px;
     border: 1px solid silver;
     text-align center
-    font-size 0.9em
-    .q-collapsible-sub-item
+    font-size 0.9rem
+    .q-collapsible-sub-itrem
       padding 0px 16px 8px 16px
     .col_name
       width 182px
@@ -242,7 +232,7 @@ export default {
       &.q-item-link
         .col_name
           text-align left
-          padding-left 1.7em
+          padding-left 1.7rem
           color: #000;
           &:before
             // font-family: "Material Icons"
@@ -251,26 +241,26 @@ export default {
             // content: "\e7ef"
             content: "\1F3C6"
             float: left;
-            margin-left: -1.7em
+            margin-left: -1.7rem
     table
       table-layout fixed
       border-collapse collapse
       text-align center
       tr
         border-bottom 1px solid silver
-        height 1.8em
+        height 1.8rem
       tbody
         .col_name
           text-align left
-          padding-left: 0.7em
+          padding-left: 0.7rem
         .col_badge
           width 34px
           text-align center
           content-align center
           .badge
             color #fff
-            font bold 0.8em normal
-            height 1.6em
+            font bold 0.8rem normal
+            height 1.6rem
             padding 0px 5px 1px 5px
             border-radius: 15px;
             vertical-align middle
@@ -279,14 +269,14 @@ export default {
           .new_offer
               background-color red
         .bread_hier
-          font 0.8em normal
+          font 0.8rem normal
           &:before
             // font-family: "Material Icons"
             // content: "\E877"
             // content: url('/statics/boy-avatar.png');
             content: "\1F3C6"
             float: left;
-            margin-left: -1.5em
+            margin-left: -1.5rem
           i
             text-decoration: none;
             font-style: normal
