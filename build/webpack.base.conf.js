@@ -55,6 +55,7 @@ module.exports = {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
+          transformToRequire: { image: 'xlink:href' },
           postcss: cssUtils.postcss,
           loaders: merge({js: 'babel-loader'}, cssUtils.styleLoaders({
             sourceMap: useCssSourceMap,

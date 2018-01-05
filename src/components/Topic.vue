@@ -1,14 +1,4 @@
 <template>
-  <!-- <q-option-group
-    color="secondary"
-    type="checkbox"
-    v-model="group"
-    :options="[
-      { label: 'Option 1', value: 'op1' },
-      { label: 'Option 2', value: 'op2' },
-      { label: 'Option 3', value: 'op3' }
-    ]"
-  /> -->
 
   <div>
 
@@ -28,7 +18,6 @@
         </q-carousel>
       </q-card-main>
     </q-card>
-
 
     <div id="main_bbs">
       <div class="bbs_container">

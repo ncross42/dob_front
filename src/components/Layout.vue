@@ -53,7 +53,7 @@
 
 <script>
 import Personal from './Personal'
-import MenuPanel from './MenuPanel'
+import MenuPanel from './Menu/MenuPanel'
 // import MenuPanelq from './MenuPanelq'
 
 import {

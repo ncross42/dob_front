@@ -121,7 +121,7 @@ export default {
 #mm_header
   width: 100%; 
   height: 2.2rem; 
-  background-color: $warning // $primary $secondary
+  background-color: #FFD25C; // $secondary
 
 #menu_panel
   // div, span, p, pre, a, img, ul, li, label, legend {
@@ -146,51 +146,51 @@ export default {
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
 
-  .nested1
-    .mm_div
-      justify-content space-between
-      a, label
-        display: inline-block;
-        cursor: pointer;
-        padding: .85rem;
-        color: #fff;
-        background-color: $primary;
-        // box-shadow: inset 0 -1px #1d1d1d;
-        -webkit-transition: all .25s ease-in;
-        transition: all .25s ease-in;
-        &:focus, &:hover
-          color: rgba(255, 255, 255, 0.5);
-          background: $faded
-      .mm_title
-        width 235px;
-        overflow hidden
-        word-wrap normal
-        white-space nowrap
-        text-overflow ellipsis
-      .mm_folder
-        padding: 0.5rem;
-        margin-left auto
-    // ul folder
-    li ul
-      height: 100%;
-      // max-height: 0;
-      display none
-      overflow: hidden;
-      -webkit-transition: max-height .2s ease-in-out;
-      transition: max-height .2s ease-in-out;
-    ul.opened
-      // max-height 1000px
-      display block
-    ul.mm_indent
-      margin-left 20px
+  // .nested1
+  //   .mm_div
+  //     justify-content space-between
+  //     a, label
+  //       display: inline-block;
+  //       cursor: pointer;
+  //       padding: .85rem;
+  //       color: #000;
+  //       background-color: #FFF1B8; // $primary;
+  //       // box-shadow: inset 0 -1px #1d1d1d;
+  //       -webkit-transition: all .25s ease-in;
+  //       transition: all .25s ease-in;
+  //       &:focus, &:hover
+  //         color: rgba(255, 255, 255, 0.5);
+  //         background: $faded
+  //     .mm_title
+  //       width 235px;
+  //       overflow hidden
+  //       word-wrap normal
+  //       white-space nowrap
+  //       text-overflow ellipsis
+  //     .mm_folder
+  //       padding: 0.5rem;
+  //       margin-left auto
+  //   // ul folder
+  //   li ul
+  //     height: 100%;
+  //     // max-height: 0;
+  //     display none
+  //     overflow: hidden;
+  //     -webkit-transition: max-height .2s ease-in-out;
+  //     transition: max-height .2s ease-in-out;
+  //   ul.opened
+  //     // max-height 1000px
+  //     display block
+  //   ul.mm_indent
+  //     margin-left 20px
 
   .nested2
     a, label
       display: inline-block;
       cursor: pointer;
       // padding: .85rem;
-      color: #fff;
-      background-color: $primary;
+      color: #000;
+      background-color: #FFF1B8; // primary
       // box-shadow: inset 0 -1px #1d1d1d;
       -webkit-transition: all .25s ease-in;
       transition: all .25s ease-in;
@@ -214,9 +214,11 @@ export default {
       padding: 5px 8px; // 0.5rem;
       margin-left auto
       // z-index 100
+      // color red
       background-color orange
-      color red
     // ul folder
+    li
+      background-color: #FFF1B8; // $primary;
     li ul
       height: 100%;
       // max-height: 0;

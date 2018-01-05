@@ -18,67 +18,65 @@
     </q-card-actions>
           
     <q-card id="notice">
-      <q-collapsible group="somegroup1" class="text-bold" icon="error_outline" label="공지사항" opened>
-        <q-list no-border>
-          <template v-for="(item,i) in arrNotice" >
-            <board-line :title="item.title" :date="item.date" />
-          </template>
-        </q-list>
-      </q-collapsible>
+      <div class="card_title">
+        <img src="~assets/icons/ic-topic-09.svg" />
+        <b>공지사항</b>
+      </div>
+      <div class="card_main">
+        <template v-for="(item,i) in arrNotice" >
+          <board-line :title="item.title" :date="item.date" />
+        </template>
+      </div>
     </q-card>
 
     <q-card id="top_hier" class="top_list">
-      <q-collapsible group="somegroup2" class="text-bold" icon="filter_list" label="인기계층" opened>
-        <table width="100%" cellpadding="1" cellspacing="1" align="center">
-          <thead>
-            <tr>
-              <th class="col_name">계층</th>
-              <th class="col_badge new_bbs">토론</th>
-              <th class="col_badge new_offer">발의</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="q-item-link">
-              <td class="col_name">
-                <router-link to="home">
-                  <div class="col_name bread_hier">
-                    <i>대한민국</i> <i>서울시</i> <i>서초구</i> <i>반포1동</i>
-                  </div>
-                </router-link>
-              </td>
-              <td class="col_badge"> <span class="badge new_bbs">14</span> </td>
-              <td class="col_badge"> <span class="badge new_offer">7</span> </td>
-            </tr>
-            <tr class="q-item-link">
-              <td class="col_name">
-                <router-link to="home">
-                  <div class="col_name bread_hier">
-                    <i>서울시</i> <i>서초구</i> <i>반포1동</i>
-                  </div>
-                </router-link>
-              </td>
-              <td class="col_badge"> <span class="badge new_bbs">14</span> </td>
-              <td class="col_badge"> <span class="badge new_offer">7</span> </td>
-            </tr>
-            <tr class="q-item-link">
-              <td class="col_name">
-                <router-link to="home">
-                  <div class="col_name bread_hier">
-                    <i>대한민국</i> <i>서울시</i> <i>서초구</i> <i>반포1동</i>
-                  </div>
-                </router-link>
-              </td>
-              <td class="col_badge"> <span class="badge new_bbs">14</span> </td>
-              <td class="col_badge"> <span class="badge new_offer">7</span> </td>
-            </tr>
-          </tbody>
-        </table>
-      </q-collapsible>
+      <div class="card_title">
+        <img src="~assets/icons/ic-topic-07.svg" />
+        <b>인기계층</b>
+      </div>
+      <div class="card_main">
+        <div class="row list_header">
+          <div class="col_name">계층</div>
+          <div class="col_badge new_bbs">토론</div>
+          <div class="col_badge new_offer">발의</div>
+        </div>
+        <router-link to="home">
+          <div class="row q-item-link list_tr">
+            <div class="col_name bread_hier">
+              <i>대한민국</i> <i>서울시</i> <i>서초구</i> <i>반포1동</i>
+            </div>
+            <div class="col_badge new_bbs"><span class="new_bbs">14</span></div>
+            <div class="col_badge new_offer"><span class="new_offer">7</span></div>
+          </div>
+        </router-link>
+        <router-link to="home">
+          <div class="row q-item-link list_tr">
+            <div class="col_name bread_hier">
+              <i>서울시</i> <i>서초구</i> <i>반포1동</i>
+            </div>
+            <div class="col_badge new_bbs"><span class="new_bbs">14</span></div>
+            <div class="col_badge new_offer"><span class="new_offer">7</span></div>
+          </div>
+        </router-link>
+        <router-link to="home">
+          <div class="row q-item-link list_tr">
+            <div class="col_name bread_hier">
+              <i>대한민국</i> <i>서울시</i> <i>서초구</i> <i>반포1동</i>
+            </div>
+            <div class="col_badge new_bbs"><span class="new_bbs">14</span></div>
+            <div class="col_badge new_offer"><span class="new_offer">7</span></div>
+          </div>
+        </router-link>
+      </div>
     </q-card>
 
     <q-card id="top_group" class="top_list">
-      <q-collapsible group="somegroup3" class="text-bold" icon="group" label="인기단체" opened>
-        <div class="row list_tr list_header">
+      <div class="card_title">
+        <img src="~assets/icons/ic-topic-08.svg" />
+        <b>인기단체</b>
+      </div>
+      <div class="card_main">
+        <div class="row list_header">
           <div class="col_name">단체</div>
           <div class="col_badge new_bbs">토론</div>
           <div class="col_badge new_offer">발의</div>
@@ -86,32 +84,32 @@
         <router-link to="home">
           <div class="row q-item-link list_tr">
             <div class="col_name"> 그린피스 </div>
-            <div class="col_badge new_bbs"><span class="badge new_bbs">14</span></div>
-            <div class="col_badge new_offer"><span class="badge new_offer">7</span></div>
+            <div class="col_badge new_bbs"><span class="new_bbs">14</span></div>
+            <div class="col_badge new_offer"><span class="new_offer">7</span></div>
           </div>
         </router-link>
         <router-link to="home">
           <div class="row q-item-link list_tr">
             <div class="col_name">원전당</div>
-            <div class="col_badge new_bbs"><span class="badge new_bbs">14</span></div>
-            <div class="col_badge new_offer"><span class="badge new_offer">7</span></div>
+            <div class="col_badge new_bbs"><span class="new_bbs">14</span></div>
+            <div class="col_badge new_offer"><span class="new_offer">7</span></div>
           </div>
         </router-link>
         <router-link to="home">
           <div class="row q-item-link list_tr">
             <div class="col_name">재생당</div>
-            <div class="col_badge new_bbs"><span class="badge new_bbs">14</span></div>
-            <div class="col_badge new_offer"><span class="badge new_offer">7</span></div>
+            <div class="col_badge new_bbs"><span class="new_bbs">14</span></div>
+            <div class="col_badge new_offer"><span class="new_offer">7</span></div>
           </div>
         </router-link>
         <router-link to="home">
           <div class="row q-item-link list_tr">
             <div class="col_name"> 전국청년정책네트워크 abcde abcde </div>
-            <div class="col_badge new_bbs"><span class="badge new_bbs">14</span></div>
-            <div class="col_badge new_offer"><span class="badge new_offer">7</span></div>
+            <div class="col_badge new_bbs"><span class="new_bbs">14</span></div>
+            <div class="col_badge new_offer"><span class="new_offer">7</span></div>
           </div>
         </router-link>
-      </q-collapsible>
+      </div>
     </q-card>
 
     <q-list no-border link inset-separator>
@@ -181,9 +179,17 @@ export default {
 
 <style lang="stylus">
 #personal 
-  .q-card
   .q-card-actions
     width 100%
+  .q-card
+    .card_title
+      display: flex;
+      align-items: center;
+      padding: 4px 16px 0px 16px
+      img
+        padding-right: 8px;
+    .card_main
+      padding: 0px 16px
   #account
     margin 0.5rem
     padding 0.5rem 1rem
@@ -212,86 +218,72 @@ export default {
       font-size 0.8rem
       line-height 1.45rem
   .top_list
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px solid silver;
     text-align center
-    font-size 0.9rem
-    .q-collapsible-sub-itrem
-      padding 0px 16px 8px 16px
     .col_name
+      color: #000;
       width 182px
     .col_badge
       width 34px
+      // text-align center
+      // content-align center
+      // .badge
+      //   color #fff
+      //   font bold 0.8rem normal
+      //   height 1.6rem
+      //   padding 0px 5px 1px 5px
+      //   border-radius: 15px;
+      //   vertical-align middle
+      // .new_bbs
+      //   background-color orange
+      // .new_offer
+      //   background-color red
     .new_bbs
       color orange
     .new_offer
       color red
     .list_header
+      font-size 0.9rem
+      text-align center
+      font-weight: bold
     .list_tr
-      border-bottom 1px solid silver
+      border-top 1px solid silver
+      font-size 0.9rem
       &.q-item-link
         .col_name
           text-align left
-          padding-left 1.7rem
+          // padding-left 1.7rem
+          // &:before
+          //   // font-family: "Material Icons"
+          //   // content: "\E877"
+          //   // content: url('/statics/boy-avatar.png');
+          //   // content: "\e7ef"
+          //   content: "\1F3C6"
+          //   float: left;
+          //   margin-left: -1.7rem
+      .bread_hier
+        font 0.9rem normal
+        font-weight normal
+        // &:before
+        //   // font-family: "Material Icons"
+        //   // content: "\E877"
+        //   // content: url('/statics/boy-avatar.png');
+        //   content: "\1F3C6"
+        //   float: left;
+        //   margin-left: -1.5rem
+        i
+          text-decoration: none;
+          font-style: normal
           color: #000;
-          &:before
-            // font-family: "Material Icons"
-            // content: "\E877"
-            // content: url('/statics/boy-avatar.png');
-            // content: "\e7ef"
-            content: "\1F3C6"
-            float: left;
-            margin-left: -1.7rem
-    table
-      table-layout fixed
-      border-collapse collapse
-      text-align center
-      tr
-        border-bottom 1px solid silver
-        height 1.8rem
-      tbody
-        .col_name
-          text-align left
-          padding-left: 0.7rem
-        .col_badge
-          width 34px
-          text-align center
-          content-align center
-          .badge
-            color #fff
-            font bold 0.8rem normal
-            height 1.6rem
-            padding 0px 5px 1px 5px
-            border-radius: 15px;
-            vertical-align middle
-          .new_bbs
-              background-color orange
-          .new_offer
-              background-color red
-        .bread_hier
-          font 0.8rem normal
-          &:before
-            // font-family: "Material Icons"
-            // content: "\E877"
-            // content: url('/statics/boy-avatar.png');
-            content: "\1F3C6"
-            float: left;
-            margin-left: -1.5rem
-          i
-            text-decoration: none;
-            font-style: normal
-            font-weight: bold;
-            color: #000;
-          i:after
-            content: "\276F";
-            color orange
-          i:first-child:before
-            content: " ";
-          i:last-child:after
-            content: "";
-        tr
-          a
-            width 100%
+        i:after
+          content: "\276F";
+          font-weight: bold;
+          color orange
+        i:first-child:before
+          content: " ";
+        i:last-child:after
+          content: "";
 
 // .layout-aside-right
 // .layout-aside-left

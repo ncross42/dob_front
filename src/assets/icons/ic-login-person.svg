@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>28B27528-5F6E-4717-A438-B1C47C9D1258</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ic_login_person">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <circle id="Oval" stroke="#FFD25C" stroke-width="2" cx="12" cy="7" r="3"></circle>
+            <path d="M3,21 L21,21 C19.6305084,15.6666667 16.6305084,13 12,13 C7.36949157,13 4.36949157,15.6666667 3,21 Z" id="Path-2" stroke="#FFD25C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+    </g>
+</svg>

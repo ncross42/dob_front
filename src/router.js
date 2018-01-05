@@ -31,7 +31,8 @@ export default new VueRouter({
         { path: '/main', component: load('Main') },
         { path: '/register', component: load('Register') },
         { path: '/login', component: load('Login') },
-        { path: '/category', component: load('Category') },
+        { path: '/topic', component: load('Topic') },
+        { path: '/hierarchy', component: load('Hierarchy') },
         { path: '/mystat', component: load('Mystat') },
         { path: '/allstat', component: load('Allstat') },
         { path: '/offer', component: load('Offer') },
@@ -39,7 +40,6 @@ export default new VueRouter({
       ]
     },
     { path: '/h', component: load('Hello') },
-
     // Always leave this last one
     { path: '*', component: load('Error404') } // Not found
   ]

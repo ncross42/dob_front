@@ -1,20 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
-    <title>0CE9DA48-0003-4118-A5E6-4642A413CDAF</title>
-    <desc>Created with sketchtool.</desc>
     <defs>
-        <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-            <g id="ic_topic_02">
-                <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
-                <g id="Page-1" transform="translate(2.000000, 2.000000)" stroke-width="1.5">
-                    <path d="M7,0.75 L13.0474228,0.75" id="Stroke-1" stroke="#FFF1B8" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M4,4 L16,4" id="Stroke-3" stroke="#FFF1B8" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M4,12 L12,12" id="Stroke-4" stroke="#FFD25C" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M4,15 L9,15" id="Stroke-5" stroke="#FFD25C" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <rect id="Rectangle-2" stroke="#FFD25C" x="0.75" y="7.75" width="18.5" height="11.5" rx="3"></rect>
-                </g>
+        <g id="ic_topic_01">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <path d="M13.4972961,8.4137662 L7.27673938,21.1864225 L7.27673938,16.5156063 C4.37415164,16.5156063 2,14.1414547 2,11.2401372 L2,8.54587522 C2,5.64455776 4.37415164,3.27040613 7.27673938,3.27040613 L16.4545059,3.27040613 C19.3558233,3.27040613 21.729975,5.64455776 21.729975,8.54587522 L21.729975,11.2401372 C21.729975,14.1414547 19.3558233,16.5156063 16.4545059,16.5156063 L9.77664864,16.5156063" id="Page-1" stroke="#FFD25C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+
+        <g id="ic_topic_02">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <g id="Page-1" transform="translate(2.000000, 2.000000)" stroke-width="1.5">
+                <path d="M7,0.75 L13.0474228,0.75" id="Stroke-1" stroke="#FFF1B8" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M4,4 L16,4" id="Stroke-3" stroke="#FFF1B8" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M4,12 L12,12" id="Stroke-4" stroke="#FFD25C" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M4,15 L9,15" id="Stroke-5" stroke="#FFD25C" stroke-linecap="round" stroke-linejoin="round"></path>
+                <rect id="Rectangle-2" stroke="#FFD25C" x="0.75" y="7.75" width="18.5" height="11.5" rx="3"></rect>
+            </g>
+        </g>
+
+        <g id="ic_topic_03">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <g id="Page-1" transform="translate(2.000000, 2.000000)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14.8493874,7 L16.6759327,7 L18.8295538,7 C19.4732992,7 20,7.61578947 20,8.36842105 L20,18.6315789 C20,19.3842105 19.4732992,20 18.8295538,20 L5.17044623,20 C4.5267008,20 4,19.3842105 4,18.6315789 L4,16.2294891" id="Stroke-1" stroke="#FFF1B8"></path>
+                <polygon id="Stroke-3" stroke="#FFD25C" points="6.5 0 8.50826011 4.27968216 13 4.96553636 9.75 8.29631341 10.5176626 13 6.5 10.7802827 2.48233743 13 3.25 8.29631341 0 4.96553636 4.49059754 4.27968216"></polygon>
+                <path d="M8,15.75 L16.5618339,15.75" id="Stroke-5" stroke="#FFF1B8"></path>
+                <path d="M13,11 L16.5355339,11" id="Stroke-9" stroke="#FFF1B8"></path>
+            </g>
+        </g>
+
+        <g id="ic_topic_04">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <g id="Page-1" transform="translate(2.000000, 3.000000)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6.6441,15.4047 L4.6871,18.0917 L4.6761,15.4137 C2.3911,15.4237 0.5141,13.5617 0.5041,11.2777 L0.4991,10.1577 C0.4901,7.8737 2.3511,5.9967 4.6351,5.9867 L9.8611,5.9647 C12.1451,5.9547 14.0221,7.8157 14.0321,10.0997 L14.0371,11.2197 C14.0461,13.5047 12.1851,15.3817 9.9011,15.3907 L6.6441,15.4047 Z" id="Stroke-1" stroke="#FFD25C"></path>
+                <path d="M6.2262,3.2445 L12.3302,3.2445 C14.5312,3.2445 17.0632,5.8995 17.0632,8.3505 L17.0632,10.8025" id="Stroke-3" stroke="#FFF1B8"></path>
+                <path d="M10.4937,0.5004 L14.1777,0.5004 C16.7607,0.5004 19.7327,3.6174 19.7327,6.4934 L19.7327,7.9514" id="Stroke-5" stroke="#FFF1B8"></path>
+            </g>
+        </g>
+
+        <g id="ic_topic_05">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <g id="Page-1" transform="translate(1.000000, 2.000000)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16.0141474,6.01491579 C18.6587789,6.00333684 20.8321474,8.15933684 20.8437263,10.8039684 L20.8495158,12.1008105 C20.8610947,14.7454421 18.7050947,16.9188105 16.0604632,16.9303895 L12.2892,16.9454421 L10.0232,20.0567053 L10.0093053,16.9558632 C8.19372632,16.9639684 6.59930526,15.9496526 5.77488421,14.4559684" id="Stroke-1" stroke="#FFF1B8"></path>
+                <polygon id="Stroke-3" stroke="#FFD25C" points="7.16817895 0.579410526 9.20375789 4.70498947 13.7566 5.36614737 10.4623895 8.57698947 11.2404947 13.1113053 7.16817895 10.9715158 3.09470526 13.1113053 3.87281053 8.57698947 0.579757895 5.36614737 5.13144211 4.70498947"></polygon>
             </g>
         </g>
     </defs>
 </svg>
+

@@ -27,7 +27,7 @@ export default {
   margin 0.2em 0.0rem
 .board-tick
   min-width 0.3rem
-  background orange
+  background #FFD25C
 .board-title
   // width 13.5rem
   overflow hidden
